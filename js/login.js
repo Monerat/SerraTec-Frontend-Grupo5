@@ -8,19 +8,17 @@ const usuarios = [
 
 function enviar(event){
     event.preventDefault()
-    const inputLogin = document.getElementById("exampleInputEmail1")
-    const inputEmail= document.getElementById("exampleInputPassword1")
-    console.log(inputLogin.value)
-    console.log(inputEmail.value)
+    const inputUser = document.getElementById("cadastroUsuario")
+    const inputEmail = document.getElementById("cadastroEmail")
+    const inputPassword = document.getElementById("cadastroPassword")
+    const user =  
+    {
+    usuario: inputUser.value,
+    email: inputEmail.value,
+    password: inputPassword.value,
+    };
+    console.log(user)
+    usuarios.push(user)
 }
-
-const user =  
-{
-    usuario: "arnaldo",
-    email: "ar@dasilva.com",
-    password: "123154",
-};
-
-usuarios.push(user)
 
 localStorage.setItem(usuarios,JSON.stringify(usuarios));
