@@ -1,0 +1,42 @@
+.grid-container{
+    width: 100%;
+    height: 100%;
+    background-color: #160440;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bannerPersonagem{
+    width: 30%;
+    height: 45%;
+    background-color: #FCE46D;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 4fr 1fr 1fr;
+    align-items: center;
+}
+
+.bannerPersonagem h3{
+    color: var(--preto);
+}
+
+#name{
+    text-align: center;
+}
+
+#image{
+    text-align: center;
+}
+
+#species{
+    text-align: center;
+}
+
+#gender{
+    text-align: center;
+}
+
+#portal{
+    cursor: pointer;
+}
