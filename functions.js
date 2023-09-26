@@ -4,7 +4,7 @@ const url = "https://rickandmortyapi.com/api/character/"; //coloca um valor cons
 let totalPersonagens;
 consultaAllChars()
 
-const botao = document.getElementById("dice"); //Pega o Botão pelo ID
+const portal = document.getElementById("portal"); //Pega o Botão pelo ID
 const nome = document.getElementById("name"); //Pega a div do Nome pelo ID
 const image = document.getElementById("image"); //Pega a div da imagem pelo ID
 const species = document.getElementById("species"); //Pega a div da especie pelo ID
@@ -38,7 +38,12 @@ function consultaPersonagem(nro) {
 
 function randomNum() {
     const nro = getRandomInt(totalPersonagens)+1; //o +1 é por que o Random pega um numero de 0 a N e a API começa a contagem em 1.
+    tocarSom()
     consultaPersonagem(nro);
 }
 
-botao.onclick = randomNum;
+function tocarSom() {
+    const audio = document.getElementById("portalSFX");// Obtém o elemento de áudio
+    audio.play();// Toca o som
+}
+portal.onclick = randomNum;

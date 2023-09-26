@@ -5,12 +5,11 @@
 
 @font-face {
     font-family: 'rick' ;
-    src: url(./assets/fonte/get_schwifty.ttf);
+    src: url(./assets/fonts/get_schwifty.ttf);
 }
 
-
 body{
-    background-image: url(./assets/imagens/ceu-estrelado.jpg);
+    background-image: url(./assets/images/ceu-estrelado.jpg);
     font-family: rick;
 }
 
@@ -20,11 +19,13 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 h1{
     display: flex;
     align-items: center;
@@ -36,26 +37,22 @@ h1{
 
 .rick-duo{
     width: 45vh;
-   
-   
-  
 }
+
 .rick-div{
     display: flex;
     align-items: center;
-    justify-content: center;
-   
-    
-     float: left;
- 
- 
+    justify-content: center;    
+    float: left;
 }
+
 footer a {
     color: rgba(14, 137, 244, 0.921);
     padding-left: 10px;
     text-align: center;
     
 }
+
 .fixarRodape {
     text-align: center;
     color: rgb(11, 135, 243);
@@ -67,6 +64,4 @@ footer{
     bottom: 0;
     width: 100%;
     align-items: center;
-    
-
 }
