@@ -1,20 +1,39 @@
 .grid-container{
     width: 100%;
     height: 100%;
-    background-color: #160440;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .bannerPersonagem{
     width: 30%;
     height: 45%;
-    background-color: #FCE46D;
+    background-color: var(--azulMenu);
     border-radius: 10px;
     display: grid;
     gap: 10px;
     grid-template-rows: 1fr 4fr 1fr 1fr;
     align-items: center;
+}
+
+.portalDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portalDiv h1 {
+    color: var(--azulMenu);
+    margin-bottom: 0;
+}
+
+#portal {
+    width: 100%;
+    height: 100%;
 }
 
 .bannerPersonagem h3{
