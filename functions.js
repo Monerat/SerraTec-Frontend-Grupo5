@@ -38,7 +38,12 @@ function consultaPersonagem(nro) {
 
 function randomNum() {
     const nro = getRandomInt(totalPersonagens)+1; //o +1 é por que o Random pega um numero de 0 a N e a API começa a contagem em 1.
+    tocarSom()
     consultaPersonagem(nro);
 }
 
+function tocarSom() {
+    const audio = document.getElementById("portalSFX");// Obtém o elemento de áudio
+    audio.play();// Toca o som
+}
 portal.onclick = randomNum;
