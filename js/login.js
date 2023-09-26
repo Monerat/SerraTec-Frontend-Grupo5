@@ -6,19 +6,23 @@ const usuarios = [
     },
 ]
 
-function enviar(event){
-    event.preventDefault()
-    const inputUser = document.getElementById("cadastroUsuario")
-    const inputEmail = document.getElementById("cadastroEmail")
-    const inputPassword = document.getElementById("cadastroPassword")
+function armazenarBase(event){
+    event.preventDefault();
+    const inputUser = document.getElementById("exampleInputUser");
+    const inputEmail = document.getElementById("exampleInputEmail1");
+    const inputPassword = document.getElementById("exampleInputPassword1");
     const user =  
     {
     usuario: inputUser.value,
     email: inputEmail.value,
     password: inputPassword.value,
     };
-    console.log(user)
-    usuarios.push(user)
+    usuarios.push(user);
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
 }
 
-localStorage.setItem(usuarios,JSON.stringify(usuarios));
+
+
+const user = localStorage.getItem("usuarios")
+let decodeUser = JSON.parse(user);
+console.log(decodeUser[0].usuario)
