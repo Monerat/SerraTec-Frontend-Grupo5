@@ -2,48 +2,49 @@ const usuarios = [
     {
         usuario: "josezin",
         email: "jose@dasilva.com",
-        password: "123154",
+        password: "123456",
     },
 ]
 
-function enviar(event){
-    event.preventDefault()
-    const inputUser = document.getElementById("cadastroUsuario")
-    const inputEmail = document.getElementById("cadastroEmail")
-    const inputPassword = document.getElementById("cadastroPassword")
-    const user =  
-    {
-    usuario: inputUser.value,
-    email: inputEmail.value,
-    password: inputPassword.value,
-    };
-    console.log(user)
-    usuarios.push(user)
-    armazenarLocalStorage()
-    console.log(inputEmail)
-    console.log(inputPassword)
+function armazenarBase(event){
+    event.preventDefault();
+    const inputUser = document.getElementById("exampleInputUser");
+    const inputEmail = document.getElementById("exampleInputEmail1");
+    const inputPassword = document.getElementById("exampleInputPassword1");
+    if(checarUsuarioBase(inputUser.value)){
+        const user =  
+        {
+        usuario: inputUser.value,
+        email: inputEmail.value,
+        password: inputPassword.value,
+        };
+        usuarios.push(user);
+        localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    }else{
+        window.alert("Usuário já cadastrado na Base")
+    }
 }
 
-    localStorage.setItem(usuarios,JSON.stringify(usuarios));
+function checarUsuarioBase(user){
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    const usuario = localStorage.getItem("usuarios")
+    let decodeUser = JSON.parse(usuario);
 
-     // Função para lidar com o envio do formulário
-     document.getElementsByClassName("nomeForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    const existingUser = decodeUser.find((element) => element.usuario === user);
 
-        // Obtém o valor do campo de entrada de nome
-        const nome = document.getElementById("nome").value;
+    return existingUser;
+}
 
-        // Armazena o nome no Local Storage
-        localStorage.setItem("nomeUsuario", nome);
+function checarLogin(user, password){
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    const usuario = localStorage.getItem("usuarios")
+    let decodeUser = JSON.parse(usuario);
 
-        // Exibe o nome na página
-        document.getElementById("nomeSalvo").textContent = "Nome Salvo: " + nome;
-    });
+    const existingUser = decodeUser.find((element) => element.usuario === user && element.password===password);
 
-    // Verifica se o nome já está no Local Storage
-    const nomeArmazenado = localStorage.getItem("nomeUsuario");
+    return existingUser;
+}
 
-    if (nomeArmazenado) {
-        // Se o nome já estiver armazenado, exibe na página
-        document.getElementById("nomeSalvo").textContent = "Nome Salvo: " + nomeArmazenado;
-    }
+function checarSeUsuarioLogado(){
+    //checar se o usuario está logado, senão, redireciona-lo para a tela de login
+}
