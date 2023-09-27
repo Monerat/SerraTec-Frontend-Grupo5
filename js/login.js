@@ -7,11 +7,14 @@ const padrao = [
     },
 ]
 
+const token = false;
+
 let usuarios = localStorage.getItem("usuarios")
 
 if (usuarios) usuarios = JSON.parse(usuarios);
 else usuarios = padrao;
 localStorage.setItem("usuarios",JSON.stringify(usuarios));
+localStorage.setItem("token",token);
 
 function armazenarBase(event){
     event.preventDefault();
