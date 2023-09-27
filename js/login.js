@@ -1,5 +1,5 @@
 // const EXPIRATION_TIME = 3600000;
-const usuarios = [
+const padrao = [
     {
         usuario: "josezin",
         email: "jose@dasilva.com",
@@ -7,11 +7,17 @@ const usuarios = [
     },
 ]
 
+let usuarios = localStorage.getItem("usuarios")
+
+if (usuarios) usuarios = JSON.parse(usuarios);
+else usuarios = padrao;
+
+
 function armazenarBase(event){
     event.preventDefault();
-    const inputUser = document.getElementById("exampleInputUser");
-    const inputEmail = document.getElementById("exampleInputEmail1");
-    const inputPassword = document.getElementById("exampleInputPassword1");
+    const inputUser = document.getElementById("cadastroUsuario");
+    const inputEmail = document.getElementById("cadastroEmail");
+    const inputPassword = document.getElementById("cadastroPassword");
     if(!checarUsuarioBase(inputUser.value)){
         const user =  
         {
@@ -20,15 +26,19 @@ function armazenarBase(event){
         password: inputPassword.value,
         };
         usuarios.push(user);
-        sessionStorage.setItem("usuarios",JSON.stringify(usuarios));
-        window.location.href = "login.html";
+
+        localStorage.setItem("usuarios",JSON.stringify(usuarios));
+        window.location.href="login.html"
+
     }else{
         window.alert("Usuário já cadastrado na Base")
     }
 }
 
 function checarUsuarioBase(user){
-    const usuario = sessionStorage.getItem("usuarios")
+
+    const usuario = localStorage.getItem("usuarios")
+
     let decodeUser = JSON.parse(usuario);
 
     const existingUser = decodeUser.find((element) => element.usuario === user);
@@ -53,8 +63,10 @@ function inputLogin(event){
     }
 }
 
-function checarLogin(user, password){
-    const usuario = sessionStorage.getItem("usuarios");
+
+function checarLogin(user, password){ 
+    const usuario = localStorage.getItem("usuarios");
+
     let decodeUser = JSON.parse(usuario);
     
     const existingUser = decodeUser.find((element) => element.usuario === user && element.password===password);
@@ -68,11 +80,12 @@ function checarLogin(user, password){
     }
 }
 
-function obterUsuario(){
-    const usuario = sessionStorage.getItem("usuarios");
+
+function obterUsuario() {
+    const usuario = localStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
 
-    if(decodeUser){
+    if(decodeUser) {
         return decodeUser;
     }
 }

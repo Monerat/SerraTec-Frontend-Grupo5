@@ -87,7 +87,7 @@ body {
     
 }
 
-.input-box {
+.form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
@@ -95,7 +95,7 @@ body {
     
 }
 
-.input-box input {
+.form-group input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -104,22 +104,22 @@ body {
     font-size: large;
 }
 
-.input-box inpur::hover {
+.form-group inpur::hover {
     background-color: var(--azulMenu);
 }
 
-.input-box input:focus-visible {
+.form-group input:focus-visible {
     outline: 1px solid rgba(0, 0, 255, 0.444);
 }
 
-.input-box label,
+.form-group label,
 .grande-title h6{
     font-size: 0.75rem;
     font-weight: 700;
     color: var(--preto);
 }
 
-.input-box input::placeholder{
+.form-group input::placeholder{
     color: var(--preto);
 }
 

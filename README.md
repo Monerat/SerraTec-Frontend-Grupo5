@@ -19,7 +19,7 @@ botão.✔️
 
 3. O sistema deve possuir no mínimo duas páginas: Uma página de login (com opção de cadastrar um novo usuário) e uma página para exibir os dados vindo da API.
    - 1. Usar o LocalStorage do navegador para guardar a lista de usuários cadastrados. ✔️
-   - 2. Verificar se o usuário está logado para poder consumir a API. Bloquear caso o usuário não esteja logado.
+   - 2. Verificar se o usuário está logado para poder consumir a API. Bloquear caso o usuário não esteja logado. ✔️
 
 4. Usar pelo menos uma classe JavaScript no projeto.✔️
 
