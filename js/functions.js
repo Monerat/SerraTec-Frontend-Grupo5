@@ -2,7 +2,10 @@ const url = "https://rickandmortyapi.com/api/character/"; //coloca um valor cons
 
 // declara a variavel que armazena o valor total de personagens disponiveis na API
 let totalPersonagens;
-consultaAllChars()
+const EXPIRATION_TIME = 10000;
+
+consultaAllChars();
+trocarStatusToken();
 
 const portal = document.getElementById("portal"); //Pega o Botão pelo ID
 const nome = document.getElementById("name"); //Pega a div do Nome pelo ID
@@ -29,7 +32,7 @@ function consultaPersonagem(nro) {
   fetch(url + nro)
     .then((res) => res.json())
     .then((dados) => {
-        nome.innerHTML = "<h1>Você é o "+ dados.name + "!</h1>"; //Pega o nome do personagem e joga dentro da div com id = name
+        nome.innerHTML = "<h1>É isso mesmo, Malandro! <br>Você é o "+ dados.name + "!</h1>"; //Pega o nome do personagem e joga dentro da div com id = name
         image.innerHTML = '<img src="' + dados.image + '"/>'; //Pega a imagem do personagem e joga dentro da div com id = image
         species.innerHTML = "<h3>A sua espécie é: " + dados.species + "</h3>"; //Pega a especie e joga dentro div com id = species
         gender.innerHTML = "<h3>O seu genero é: " + dados.gender + "</h3>"; //Pega o genero e joga dentro da div com id = gender
@@ -46,4 +49,23 @@ function tocarSom() {
     const audio = document.getElementById("portalSFX");// Obtém o elemento de áudio
     audio.play();// Toca o som
 }
-portal.onclick = randomNum;
+
+function checkLogado(){
+    const teste = localStorage.getItem("token")
+    console.log(teste)
+    if (teste == "true"){
+        randomNum();
+    }
+    else{
+        window.alert("Tempo de login finalizado, logue novamente")
+        window.location.replace("login.html");
+    }
+}
+
+function trocarStatusToken(){
+    setTimeout(() => {
+        localStorage.setItem("token", false);
+      }, EXPIRATION_TIME);
+}
+
+portal.onclick = checkLogado;

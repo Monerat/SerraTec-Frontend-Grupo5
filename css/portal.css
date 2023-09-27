@@ -1,23 +1,14 @@
 *{
     border: 0;
     bottom: 0;
-}
-
-@font-face {
-    font-family: 'rick' ;
-    src: url(./assets/fonts/get_schwifty.ttf);
-}
-
-body{
-    background-image: url(./assets/images/ceu-estrelado.jpg);
-    font-family: rick;
-}
+}   
 
 .portal{
     width: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .container{
