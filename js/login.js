@@ -1,4 +1,3 @@
-// const EXPIRATION_TIME = 3600000;
 const padrao = [
     {
         usuario: "josezin",
@@ -13,9 +12,12 @@ let usuarios = localStorage.getItem("usuarios")
 
 if (usuarios) usuarios = JSON.parse(usuarios);
 else usuarios = padrao;
+//inicializa a base
 localStorage.setItem("usuarios",JSON.stringify(usuarios));
+//inicializa o token
 localStorage.setItem("token",token);
 
+//Armazena oque foi inserido nos campos do formulario no local Storage.
 function armazenarBase(event){
     event.preventDefault();
     const inputUser = document.getElementById("cadastroUsuario");
@@ -36,6 +38,7 @@ function armazenarBase(event){
     }
 }
 
+//Checa se o usuario já está inserido na base.
 function checarUsuarioBase(user){
     const usuario = localStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
@@ -49,6 +52,7 @@ function checarUsuarioBase(user){
     }
 }
 
+//Faz o login se o usuario e senha estiver na base.
 function inputLogin(event){
     event.preventDefault();
     const inputUser = document.getElementById("loginUsuario");
@@ -62,6 +66,7 @@ function inputLogin(event){
     }
 }
 
+//Checa se o par Usuario e Senha estao na base
 function checarLogin(user, password){ 
     const usuario = localStorage.getItem("usuarios");
     let decodeUser = JSON.parse(usuario);
@@ -75,19 +80,4 @@ function checarLogin(user, password){
     else{
         return false;
     }
-}
-
-function obterUsuario() {
-    const usuario = localStorage.getItem("usuarios")
-    let decodeUser = JSON.parse(usuario);
-
-    if(decodeUser) {
-        return decodeUser;
-    }
-}
-
-function testDelay(){
-    setTimeout(() => {
-        console.log(obterUsuario());
-      }, 2000);
 }
