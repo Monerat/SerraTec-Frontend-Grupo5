@@ -21,14 +21,21 @@
                 <div class="textfield">
                     <label for="usuario">Usuário</label>
                     <input type="text" name="usuario" placeholder="Usuário">
+            <form onsubmit="inputLogin(event)">
+                <div class="card-login">
+                    <h1>LOGIN 🔫</h1>
+                    <div class="textfield">
+                        <label for="loginUsuario">Usuário</label>
+                        <input id="loginUsuario" type="text" name="usuario" placeholder="Usuário">
+                    </div>
+                    <div class="textfield">
+                        <label for="loginSenha">Senha</label>
+                        <input id="loginSenha" type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-login" type="submit">Login</button>
+                    <a href="./cadastro.html"><h3>Novo usuário? Cadastre-se!</h3>
                 </div>
-                <div class="textfield">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
-                <button class="btn-login">Login</button>
-                <a href="./cadastro.html"><h3>Novo usuário? Cadastre-se!</h3>
-            </div>
+            </form>
         </div>
         <footer class="fixarRodape">
             <a href="https://github.com/Monerat/SerraTec-Frontend-Grupo5" target="_blank">Front End Grupo 5 &COPY2023</a>
