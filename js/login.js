@@ -1,4 +1,4 @@
-const EXPIRATION_TIME = 1000;
+
 // const EXPIRATION_TIME = 3600000;
 const usuarios = [
     {
@@ -7,8 +7,6 @@ const usuarios = [
         password: "123456",
     },
 ]
-
-localStorage.setItem("token",false);
 
 function armazenarBase(event){
     event.preventDefault();
@@ -49,9 +47,7 @@ function inputLogin(event){
     const inputPassword = document.getElementById("loginSenha");
         
     if(checarLogin(inputUser.value,inputPassword.value)){
-        //window.location.replace("app.html");
-        console.log(localStorage.getItem("token"));
-        testDelay()
+        window.location.replace("app.html");
     }
     else{
         window.alert('Usuário ou senha inválidos')
@@ -67,7 +63,6 @@ function checarLogin(user, password){
     
     if(existingUser){
         localStorage.setItem("token",true);
-        trocarStatusToken();
         return true;
     }
     else{
@@ -75,19 +70,6 @@ function checarLogin(user, password){
     }
 }
 
-function trocarStatusToken(){
-    setTimeout(() => {
-        localStorage.setItem("token", false);
-      }, EXPIRATION_TIME);
-}
-
-
-function checarSeUsuarioLogado(){
-    while(localStorage.getItem("token"));
-
-}
-
-console.log(localStorage.getItem("token"));
 function testDelay(){
     setTimeout(() => {
         console.log(localStorage.getItem("token"));
