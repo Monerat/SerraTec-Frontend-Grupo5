@@ -15,8 +15,8 @@
     border-radius: 10px;
     display: grid;
     gap: 10px;
-    grid-template-rows: 1fr 4fr 1fr 1fr;
     align-items: center;
+    
 }
 
 .portalDiv {
@@ -38,10 +38,14 @@
 
 .bannerPersonagem h3{
     color: var(--preto);
+    margin-bottom: 5px;
+    
+
 }
 
 #name{
     text-align: center;
+    
 }
 
 #image{
@@ -50,12 +54,58 @@
 
 #species{
     text-align: center;
+    font-size: x-large;
+    
 }
 
 #gender{
     text-align: center;
+    font-size: x-large;
 }
 
 #portal{
     cursor: pointer;
+}
+.bannerPersonagem{
+    margin: 0;
+    gap: 0;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    .bannerPersonagem {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 303px) {
+    .bannerPersonagem {
+      width: 100%;
+      background: none;
+      color: var(--branco);
+
+    } 
+    .bannerPersonagem h3 {
+      color: var(--branco);
+    }
+    .portalDiv h1 {
+        display: none;
+    }
+    #portal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #portal img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+ @media screen and (max-width: 267px) {
+    #portal{
+        display: none;
+    }
 }
