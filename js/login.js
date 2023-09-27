@@ -2,7 +2,7 @@ const usuarios = [
     {
         usuario: "josezin",
         email: "jose@dasilva.com",
-        password: "123154",
+        password: "123456",
     },
 ]
 
@@ -33,4 +33,18 @@ function checarUsuarioBase(user){
     const existingUser = decodeUser.find((element) => element.usuario === user);
 
     return existingUser;
+}
+
+function checarLogin(user, password){
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    const usuario = localStorage.getItem("usuarios")
+    let decodeUser = JSON.parse(usuario);
+
+    const existingUser = decodeUser.find((element) => element.usuario === user && element.password===password);
+
+    return existingUser;
+}
+
+function checarSeUsuarioLogado(){
+    //checar se o usuario está logado, senão, redireciona-lo para a tela de login
 }
