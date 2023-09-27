@@ -1,4 +1,3 @@
-
 // const EXPIRATION_TIME = 3600000;
 const usuarios = [
     {
@@ -21,15 +20,15 @@ function armazenarBase(event){
         password: inputPassword.value,
         };
         usuarios.push(user);
-        localStorage.setItem("usuarios",JSON.stringify(usuarios));
+        sessionStorage.setItem("usuarios",JSON.stringify(usuarios));
+        window.location.href = "login.html";
     }else{
         window.alert("Usuário já cadastrado na Base")
     }
 }
 
 function checarUsuarioBase(user){
-    localStorage.setItem("usuarios",JSON.stringify(usuarios));
-    const usuario = localStorage.getItem("usuarios")
+    const usuario = sessionStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
 
     const existingUser = decodeUser.find((element) => element.usuario === user);
@@ -55,14 +54,13 @@ function inputLogin(event){
 }
 
 function checarLogin(user, password){
-    localStorage.setItem("usuarios",JSON.stringify(usuarios));
-    const usuario = localStorage.getItem("usuarios");
+    const usuario = sessionStorage.getItem("usuarios");
     let decodeUser = JSON.parse(usuario);
     
     const existingUser = decodeUser.find((element) => element.usuario === user && element.password===password);
     
     if(existingUser){
-        localStorage.setItem("token",true);
+        sessionStorage.setItem("token",true);
         return true;
     }
     else{
@@ -70,8 +68,17 @@ function checarLogin(user, password){
     }
 }
 
+function obterUsuario(){
+    const usuario = sessionStorage.getItem("usuarios");
+    let decodeUser = JSON.parse(usuario);
+
+    if(decodeUser){
+        return decodeUser;
+    }
+}
+
 function testDelay(){
     setTimeout(() => {
-        console.log(localStorage.getItem("token"));
+        console.log(obterUsuario());
       }, 2000);
 }
