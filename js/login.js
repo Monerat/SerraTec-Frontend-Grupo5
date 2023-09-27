@@ -1,13 +1,14 @@
-const EXPIRATION_TIME = 10000;
+const EXPIRATION_TIME = 1000;
 // const EXPIRATION_TIME = 3600000;
 const usuarios = [
     {
         usuario: "josezin",
         email: "jose@dasilva.com",
         password: "123456",
-        token: false,
     },
 ]
+
+localStorage.setItem("token",false);
 
 function armazenarBase(event){
     event.preventDefault();
@@ -20,7 +21,6 @@ function armazenarBase(event){
         usuario: inputUser.value,
         email: inputEmail.value,
         password: inputPassword.value,
-        token: false,
         };
         usuarios.push(user);
         localStorage.setItem("usuarios",JSON.stringify(usuarios));
@@ -47,9 +47,11 @@ function inputLogin(event){
     event.preventDefault();
     const inputUser = document.getElementById("loginUsuario");
     const inputPassword = document.getElementById("loginSenha");
-    console.log(checarLogin(inputUser.value,inputPassword.value));
+        
     if(checarLogin(inputUser.value,inputPassword.value)){
-        window.location.replace("app.html");
+        //window.location.replace("app.html");
+        console.log(localStorage.getItem("token"));
+        testDelay()
     }
     else{
         window.alert('Usuário ou senha inválidos')
@@ -60,12 +62,12 @@ function checarLogin(user, password){
     localStorage.setItem("usuarios",JSON.stringify(usuarios));
     const usuario = localStorage.getItem("usuarios");
     let decodeUser = JSON.parse(usuario);
+    
     const existingUser = decodeUser.find((element) => element.usuario === user && element.password===password);
     
     if(existingUser){
-        existingUser.token = true;
-        trocarStatusToken(existingUser);
-        localStorage.setItem("usuarios",JSON.stringify(existingUser))
+        localStorage.setItem("token",true);
+        trocarStatusToken();
         return true;
     }
     else{
@@ -73,19 +75,21 @@ function checarLogin(user, password){
     }
 }
 
-function trocarStatusToken(user){
+function trocarStatusToken(){
     setTimeout(() => {
-        user.token = false;
+        localStorage.setItem("token", false);
       }, EXPIRATION_TIME);
 }
 
+
 function checarSeUsuarioLogado(){
-     
+    while(localStorage.getItem("token"));
+
 }
 
+console.log(localStorage.getItem("token"));
 function testDelay(){
     setTimeout(() => {
-        console.log(checarLogin("josezin", "123456"));
-      }, 20000);
+        console.log(localStorage.getItem("token"));
+      }, 2000);
 }
-// testDelay()
