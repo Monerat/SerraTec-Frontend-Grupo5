@@ -1,6 +1,5 @@
-
 // const EXPIRATION_TIME = 3600000;
-const usuarios = [
+const padrao = [
     {
         usuario: "josezin",
         email: "jose@dasilva.com",
@@ -8,11 +7,17 @@ const usuarios = [
     },
 ]
 
+let usuarios = localStorage.getItem("usuarios")
+
+if (usuarios) usuarios = JSON.parse(usuarios);
+else usuarios = padrao;
+
+
 function armazenarBase(event){
     event.preventDefault();
-    const inputUser = document.getElementById("exampleInputUser");
-    const inputEmail = document.getElementById("exampleInputEmail1");
-    const inputPassword = document.getElementById("exampleInputPassword1");
+    const inputUser = document.getElementById("cadastroUsuario");
+    const inputEmail = document.getElementById("cadastroEmail");
+    const inputPassword = document.getElementById("cadastroPassword");
     if(!checarUsuarioBase(inputUser.value)){
         const user =  
         {
@@ -22,13 +27,13 @@ function armazenarBase(event){
         };
         usuarios.push(user);
         localStorage.setItem("usuarios",JSON.stringify(usuarios));
+        window.location.href="login.html"
     }else{
         window.alert("Usuário já cadastrado na Base")
     }
 }
 
 function checarUsuarioBase(user){
-    localStorage.setItem("usuarios",JSON.stringify(usuarios));
     const usuario = localStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
 
@@ -54,8 +59,7 @@ function inputLogin(event){
     }
 }
 
-function checarLogin(user, password){
-    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+function checarLogin(user, password){ 
     const usuario = localStorage.getItem("usuarios");
     let decodeUser = JSON.parse(usuario);
     
@@ -70,8 +74,17 @@ function checarLogin(user, password){
     }
 }
 
+function obterUsuario() {
+    const usuario = localStorage.getItem("usuarios")
+    let decodeUser = JSON.parse(usuario);
+
+    if(decodeUser) {
+        return decodeUser;
+    }
+}
+
 function testDelay(){
     setTimeout(() => {
-        console.log(localStorage.getItem("token"));
+        console.log(obterUsuario());
       }, 2000);
 }
