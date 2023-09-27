@@ -11,7 +11,7 @@ let usuarios = localStorage.getItem("usuarios")
 
 if (usuarios) usuarios = JSON.parse(usuarios);
 else usuarios = padrao;
-
+localStorage.setItem("usuarios",JSON.stringify(usuarios));
 
 function armazenarBase(event){
     event.preventDefault();
