@@ -80,7 +80,7 @@ function trocarStatusToken(user){
 }
 
 function checarSeUsuarioLogado(){
-
+     
 }
 
 function testDelay(){
