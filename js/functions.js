@@ -2,7 +2,10 @@ const url = "https://rickandmortyapi.com/api/character/"; //coloca um valor cons
 
 // declara a variavel que armazena o valor total de personagens disponiveis na API
 let totalPersonagens;
-consultaAllChars()
+const EXPIRATION_TIME = 10000;
+
+consultaAllChars();
+trocarStatusToken();
 
 const portal = document.getElementById("portal"); //Pega o Botão pelo ID
 const nome = document.getElementById("name"); //Pega a div do Nome pelo ID
@@ -46,4 +49,23 @@ function tocarSom() {
     const audio = document.getElementById("portalSFX");// Obtém o elemento de áudio
     audio.play();// Toca o som
 }
-portal.onclick = randomNum;
+
+function checkLogado(){
+    const teste = localStorage.getItem("token")
+    console.log(teste)
+    if (teste == "true"){
+        randomNum();
+    }
+    else{
+        window.alert("Tempo de login finalizado, logue novamente")
+        window.location.replace("login.html");
+    }
+}
+
+function trocarStatusToken(){
+    setTimeout(() => {
+        localStorage.setItem("token", false);
+      }, EXPIRATION_TIME);
+}
+
+portal.onclick = checkLogado;
