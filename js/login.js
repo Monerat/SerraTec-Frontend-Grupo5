@@ -25,15 +25,12 @@ function armazenarBase(event){
     }
 }
 
-function checarUsuarioBase(d){
+function checarUsuarioBase(user){
     localStorage.setItem("usuarios",JSON.stringify(usuarios));
     const usuario = localStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
-    decodeUser.forEach(element => {
-        console.log(element.usuario)
-        if(element.usuario==d){
-            return false
-        }
-    });
-    return true;
+
+    const existingUser = decodeUser.find((element) => element.usuario === user);
+
+    return existingUser;
 }
