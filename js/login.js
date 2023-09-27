@@ -11,16 +11,29 @@ function armazenarBase(event){
     const inputUser = document.getElementById("exampleInputUser");
     const inputEmail = document.getElementById("exampleInputEmail1");
     const inputPassword = document.getElementById("exampleInputPassword1");
-    const user =  
-    {
-    usuario: inputUser.value,
-    email: inputEmail.value,
-    password: inputPassword.value,
-    };
-    usuarios.push(user);
-    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    if(checarUsuarioBase(inputUser.value)){
+        const user =  
+        {
+        usuario: inputUser.value,
+        email: inputEmail.value,
+        password: inputPassword.value,
+        };
+        usuarios.push(user);
+        localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    }else{
+        window.alert("Usuário já cadastrado na Base")
+    }
 }
 
-const user = localStorage.getItem("usuarios")
-let decodeUser = JSON.parse(user);
-console.log(decodeUser[0].usuario)
+function checarUsuarioBase(d){
+    localStorage.setItem("usuarios",JSON.stringify(usuarios));
+    const usuario = localStorage.getItem("usuarios")
+    let decodeUser = JSON.parse(usuario);
+    decodeUser.forEach(element => {
+        console.log(element.usuario)
+        if(element.usuario==d){
+            return false
+        }
+    });
+    return true;
+}
