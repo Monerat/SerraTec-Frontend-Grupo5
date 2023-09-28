@@ -9,13 +9,14 @@
 
 
 .bannerPersonagem{
-    width: 30%;
+    width: 320px;
     height: 45%;
     background-color: var(--azulMenu);
     border-radius: 10px;
     display: grid;
     gap: 10px;
     align-items: center;
+    box-shadow: 3px 3px 40px 3px rgb(106, 254, 0);
     
 }
 
@@ -27,13 +28,13 @@
 }
 
 .portalDiv h1 {
-    color: var(--azulMenu);
+    color: rgba(106, 254, 0);
     margin-bottom: 0;
 }
 
 #portal {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 .bannerPersonagem h3{
@@ -73,12 +74,6 @@
 
 
 /* Media queries */
-
-@media screen and (max-width: 768px) {
-    .bannerPersonagem {
-      width: 100%;
-    }
-}
 
 @media screen and (max-width: 303px) {
     .bannerPersonagem {
