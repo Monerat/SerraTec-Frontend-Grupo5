@@ -24,8 +24,12 @@ function armazenarBase(event){
     const inputEmail = document.getElementById("cadastroEmail");
     const inputPassword = document.getElementById("cadastroPassword");
     const inputConfirmPwd = document.getElementById("cadastroConfirmPwd");
+    console.log(inputPassword)
+    console.log(inputConfirmPwd)
+    console.log((inputPassword == inputConfirmPwd))
     
-    if(!checarUsuarioBase(inputUser.value) && inputPassword == inputConfirmPwd){
+
+    if(!checarUsuarioBase(inputUser.value) && (inputPassword.value == inputConfirmPwd.value)){
         const user =  
         {
         usuario: inputUser.value,
