@@ -48,6 +48,7 @@ function randomNum() {
 
 function tocarSom() {
     const audio = document.getElementById("portalSFX");// Obtém o elemento de áudio.
+    audio.currentTime = 0;
     audio.play();// Toca o som.
 }
 
