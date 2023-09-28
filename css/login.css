@@ -59,20 +59,20 @@
 
 /* Define estilos para links dentro de .card-login */
 .card-login a:link {
-    text-decoration: none; /* Remove a decoração do texto */
-    color: var(--branco); /* Define a cor do texto */
+    text-decoration: none;
+    color: var(--preto);
 }
   
 /* Define estilos para links visitados dentro de .card-login */
 .card-login a:visited {
-    text-decoration: none; /* Remove a decoração do texto */
-    color: var(--branco); /* Define a cor do texto para links visitados */
+    text-decoration: none;
+    color: var(--preto);
 }
 
 /* Define estilos para links quando o mouse passa por cima dentro de .card-login */
 .card-login a:hover {
-    text-decoration: none; /* Remove a decoração do texto */
-    color: var(--preto); /* Define a cor do texto para links quando o mouse passa por cima */
+    text-decoration:none;
+    color: var(--verdeEscuro);
 }
 
 /* Define estilos para links ativos (clicados) dentro de .card-login */
@@ -90,26 +90,25 @@
     margin: 10px 0; /* Define a margem */
 }
 
-/* Define estilos para elementos de entrada dentro de .textfield */
-.textfield > input {
-    width: 100%; /* Define a largura como 100% */
-    border: none; /* Remove a borda */
-    border-radius: 10px; /* Define o raio do canto */
-    padding: 15px; /* Define o preenchimento */
-    background-color: var(--verdeAlien); /* Define a cor de fundo */
-    color: var(--branco); /* Define a cor do texto */
-    font-size: 12pt; /* Define o tamanho da fonte */
-    box-shadow: 0px 10px 40px  var(--preto); /* Define uma sombra */
-    outline: none; /* Remove a borda de foco */
-    box-sizing: border-box; /* Define o modelo de caixa */
-    font-family: rick; /* Define a fonte */
-    box-shadow: 0
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color:var(--verdeAlien);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px  var(--preto);
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 10px 40px -12px var(--verdeLimao);
 }
 
 /* Define estilos para rótulos (labels) dentro de .textfield */
 .textfield > label {
-    color: var(--preto); /* Define a cor do texto */
-    margin-bottom: 10px; /* Define a margem inferior */
+    color: var(--preto);
+    margin-bottom: 10px;
+    font-size: 14pt;
 }
 
 /* Define estilos para o marcador de posição (placeholder) dos elementos de entrada dentro de .textfield */
@@ -135,7 +134,11 @@
     font-family: rick; /* Define a fonte */
 }
 
-/* Define estilos para links no rodapé */
+.btn-login:hover {
+    color: var(--branco);
+    background-color: var(--verdeEscuro);
+}
+
 footer a {
     color: var(--branco); /* Define a cor do texto */
     padding-left: 10px; /* Define o preenchimento à esquerda */

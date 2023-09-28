@@ -6,17 +6,21 @@
 
 /* Estiliza o corpo da página */
 body {
-    margin: 0;/* Define margem zero para o corpo da página */
-    font-family: rick; /* Aplica a fonte personalizada 'rick' ao texto no corpo */
-    box-sizing: border-box;/* Garante que o modelo de caixa seja "border-box" */
-    --azulMenu: #69C8ECff;/* Define uma variável de cor '--azulMenu' */
+    margin: 0;
+    font-family: rick;
+    box-sizing: border-box;
+    --azulMenu: #69C8ECff;
+    --azulEscuro: rgb(76, 0, 218);
     --verdeAlien: #08C952;
     --verdeLimao: #5CAD4A;
     --verdeMata: #208D45;
     --verdeGrama: #A7CB54;
+    --verdeEscuro: #014c1d;
+    --amareloBanana: #E5D93E;
     --preto: #0D0D0D;
     --pretoOpacidade: hsla(0, 0%, 5%, 0.5);/* Define uma variável de cor '--pretoOpacidade' com hsla */
     --branco: #F0F2EB;
+
     background-image: url(../assets/images/ceu-estrelado.jpg);
 }
 

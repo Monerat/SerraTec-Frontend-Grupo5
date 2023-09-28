@@ -49,14 +49,14 @@ body {
 
 /* Define estilos para elementos com classe 'form' */
 .form {
-    width: 50%; /* Define a largura como 50% */
-    display: flex; /* Usa display flex para organizar o conteúdo */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Define a direção do flex como coluna */
-    background-image: url(../assets/images/fundo-imput.jpg); /* Define uma imagem de fundo */
-    box-shadow: 5px 5px 45px 4px bisque; /* Define uma sombra */
-    padding: 3rem; /* Define o preenchimento */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../assets/images/fundo-imput.jpg);
+    box-shadow: 5px 5px 45px 4px bisque;
+    padding: 3rem;
 }
 
 /* Define estilos para elementos com classe 'form-header' */
@@ -94,10 +94,10 @@ body {
  
 /* Define estilos para elementos com classe 'input-group' */
 .input-group {
-    display: flex; /* Usa display flex para organizar o conteúdo */
-    flex-wrap: wrap; /* Permite a quebra de linha flexível */
-    justify-content: space-between; /* Espaço entre elementos */
-    padding: 1rem 0; /* Define o preenchimento */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;  
 }
 
 /* Define estilos para elementos com classe 'form-group' */
@@ -111,12 +111,14 @@ body {
 
 /* Define estilos para inputs dentro de elementos 'form-group' */
 .form-group input {
-    margin: 0.6rem 0; /* Define a margem superior e inferior */
-    padding: 0.8rem 1.2rem; /* Define o preenchimento */
-    border: none; /* Remove a borda */
-    border-radius: 10px; /* Define o raio do canto */
-    box-shadow: 1px 1px 6px var(--azulMenu); /* Define uma sombra */
-    font-size: large; /* Define o tamanho da fonte */
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--azulMenu);
+    font-size: 12pt;
+    color: var(--preto);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* Define a cor de fundo ao passar o mouse sobre elementos de entrada dentro de .form-group */
@@ -139,7 +141,7 @@ body {
 
 /* Define a cor do texto do marcador de posição (placeholder) dos elementos de entrada dentro de .form-group */
 .form-group input::placeholder{
-    color: var(--preto);
+    color: var(--pretoOpacidade);
 }
 
 /* Define estilos para .gender-group */
@@ -158,7 +160,7 @@ body {
 
 /* Define estilos para elementos de entrada dentro de .gender-inpout */
 .gender-inpout input {
-    margin-right: 0.35rem; /* Define a margem direita */
+    margin-right: 0.35rem;
 }
 
 /* Define estilos para rótulos de .gender-input */
@@ -170,18 +172,20 @@ body {
 
 /* Define estilos para o botão dentro de .continue-button */
 .continue-button button {
-    width: 100%; /* Define a largura como 100% */
-    margin-top: 2.5rem; /* Define a margem superior */
-    border: none; /* Remove a borda */
-    background-color: var(--azulMenu); /* Define a cor de fundo */
-    padding: 0.62rem; /* Define o preenchimento */
-    border-radius: 5px; /* Define o raio do canto */
-    cursor: pointer; /* Define o cursor do mouse como um ponteiro */
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: var(--azulMenu);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16pt;
+    color: var(--preto);
 }
 
 /* Define estilos para o botão quando o mouse passa por cima */
 .continue-button button:hover {
-    background-color: aquamarine; /* Define a cor de fundo ao passar o mouse */
+    background-color: var(--azulEscuro);
 }
 
 /* Define estilos para links dentro do botão de continuação */
@@ -192,33 +196,44 @@ body {
     color: var(--branco); /* Define a cor do texto */
 }
 
-/* Regras de mídia para telas com largura máxima de 768px */
+.linkLogin {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.linkLogin a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+.linkLogin a:hover {
+    color: var(--azulEscuro);
+}
+
 @media screen and (max-width: 768px) {
     .container {
       width: 100%; /* Define a largura como 100% */
     }
 
     .form {
-      width: 100%; /* Define a largura como 100% */
+      width: 100%;
     }
 }
 
-/* Regras de mídia para telas com largura máxima de 1600px */
-@media screen and (max-width: 1600px) {
-    .container {
-        width: 90%; /* Define a largura como 90% */
-        height: auto; /* Define a altura automática */
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 90%;
+        height: auto;
     }
-    .input-group {
-        flex-direction: column; /* Define a direção flex como coluna */
-        overflow-y: scroll; /* Adiciona uma barra de rolagem vertical quando necessário */
-        flex-wrap: nowrap; /* Impede que os elementos quebrem em várias linhas */
-        max-height: 10rem; /* Define a altura máxima */
-        padding-right: 5rem; /* Define o preenchimento à direita */
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
     }
 }
 
-/* Regras de mídia para telas com largura máxima de 425px */
 @media screen and (max-width: 425px) {
     .form-image {
         display: none; /* Oculta elementos com a classe .form-image */

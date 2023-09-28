@@ -6,16 +6,18 @@ const padrao = [
     },
 ]
 
-const token = false;
+let usuarios = localStorage.getItem("usuarios");
 
-let usuarios = localStorage.getItem("usuarios")
-
-if (usuarios) usuarios = JSON.parse(usuarios);
-else usuarios = padrao;
+if (usuarios) {
+    usuarios = JSON.parse(usuarios);
+}
+else{
+    usuarios = padrao;
+} 
 //inicializa a base
 localStorage.setItem("usuarios",JSON.stringify(usuarios));
 //inicializa o token
-localStorage.setItem("token",token);
+localStorage.setItem("token",false);
 
 //Armazena oque foi inserido nos campos do formulario no local Storage.
 function armazenarBase(event){
@@ -23,7 +25,9 @@ function armazenarBase(event){
     const inputUser = document.getElementById("cadastroUsuario");
     const inputEmail = document.getElementById("cadastroEmail");
     const inputPassword = document.getElementById("cadastroPassword");
-    if(!checarUsuarioBase(inputUser.value)){
+    const inputConfirmPwd = document.getElementById("cadastroConfirmPwd");    
+
+    if(!checarUsuarioBase(inputUser.value) && (inputPassword.value == inputConfirmPwd.value)){
         const user =  
         {
         usuario: inputUser.value,
@@ -33,7 +37,9 @@ function armazenarBase(event){
         usuarios.push(user);
         localStorage.setItem("usuarios",JSON.stringify(usuarios));
         window.location.href="login.html"
-    }else{
+    }else if ((inputPassword.value == inputConfirmPwd.value)){
+        window.alert("As duas senhas não conferem")
+    }else {
         window.alert("Usuário já cadastrado na Base")
     }
 }
@@ -44,6 +50,7 @@ function checarUsuarioBase(user){
     let decodeUser = JSON.parse(usuario);
 
     const existingUser = decodeUser.find((element) => element.usuario === user);
+    
     if(existingUser){
         return true;
     }

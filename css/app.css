@@ -8,15 +8,16 @@
     align-items: center; /* Centraliza horizontalmente */
 }
 
-/* Define estilos para a classe bannerPersonagem */
-.bannerPersonagem {
-    width: 30%; /* Define a largura como 30% */
-    height: 45%; /* Define a altura como 45% */
-    background-color: var(--azulMenu); /* Define a cor de fundo a partir de uma variável */
-    border-radius: 10px; /* Define o raio do canto */
-    display: grid; /* Usa display grid para organizar o conteúdo */
-    gap: 10px; /* Define o espaçamento entre os elementos filhos */
-    align-items: center; /* Centraliza verticalmente */
+
+.bannerPersonagem{
+    width: 320px;
+    height: 45%;
+    background-color: var(--azulMenu);
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 3px 3px 40px 3px rgb(106, 254, 0);
 }
 
 /* Define estilos para a classe portalDiv */
@@ -29,26 +30,24 @@
 
 /* Define estilos para o título h1 dentro de portalDiv */
 .portalDiv h1 {
-    color: var(--azulMenu); /* Define a cor do texto */
-    margin-bottom: 0; /* Remove a margem inferior */
+    color: rgba(106, 254, 0);
+    margin-bottom: 0;
 }
 
 /* Define estilos para o elemento com ID "portal" */
 #portal {
-    width: 100%; /* Define a largura como 100% */
-    height: 100%; /* Define a altura como 100% */
+    width: 90%;
+    height: 90%;
 }
 
-/* Define estilos para o título h3 dentro de bannerPersonagem */
-.bannerPersonagem h3 {
-    color: var(--preto); /* Define a cor do texto */
-    margin-bottom: 5px; /* Define a margem inferior */
+.bannerPersonagem h3{
+    color: var(--preto);
+    margin-bottom: 5px;
 }
 
 
 #name{
-    text-align: center;/* Centraliza o texto horizontalmente */
-    
+    text-align: center;
 }
 
 #image{
@@ -56,9 +55,8 @@
 }
 
 #species{
-    text-align: center;/* Centraliza o texto horizontalmente */
-    font-size: x-large;/* Define o tamanho da fonte como x-large */
-    
+    text-align: center;
+    font-size: x-large;
 }
 
 #gender{
@@ -70,20 +68,12 @@
     cursor: pointer; /* Define o cursor do mouse como um ponteiro */
 }
 
-/* Remove margens e espaçamentos internos da classe bannerPersonagem */
-.bannerPersonagem {
+.bannerPersonagem{
     margin: 0;
     gap: 0;
 }
 
-/* Media queries para telas com largura máxima de 768px */
-@media screen and (max-width: 768px) {
-    .bannerPersonagem {
-        width: 100%; /* Define a largura como 100% */
-    }
-}
-
-/* Media queries para telas com largura máxima de 303px */
+/* Media queries */
 @media screen and (max-width: 303px) {
     .bannerPersonagem {
         width: 100%; /* Define a largura como 100% */
@@ -108,9 +98,8 @@
     }
 }
 
-/* Media queries para telas com largura máxima de 267px */
 @media screen and (max-width: 267px) {
-    #portal {
-        display: none; /* Oculta completamente o elemento com ID "portal" */
+    #portal{
+        display: none;
     }
 }
