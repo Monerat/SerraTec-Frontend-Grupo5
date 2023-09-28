@@ -13,8 +13,9 @@
     height: 45%;
     background-color: var(--azulMenu);
     border-radius: 10px;
-    display: grid;
-    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     box-shadow: 3px 3px 40px 3px rgb(106, 254, 0);
     
