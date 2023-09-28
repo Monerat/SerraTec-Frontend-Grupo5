@@ -97,7 +97,9 @@
 .textfield > label {
     color: var(--preto);
     margin-bottom: 10px;
+    background-color: none;
 }
+
 
 .textfield > input::placeholder {
     color: var(--pretoOpacidade);
