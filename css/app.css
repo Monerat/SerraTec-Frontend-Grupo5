@@ -1,111 +1,116 @@
-.grid-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Define estilos para o container da grade */
+.grid-container {
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    flex-direction: column; /* Define a direção flex como coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
 }
 
-
-.bannerPersonagem{
-    width: 30%;
-    height: 45%;
-    background-color: var(--azulMenu);
-    border-radius: 10px;
-    display: grid;
-    gap: 10px;
-    align-items: center;
-    
+/* Define estilos para a classe bannerPersonagem */
+.bannerPersonagem {
+    width: 30%; /* Define a largura como 30% */
+    height: 45%; /* Define a altura como 45% */
+    background-color: var(--azulMenu); /* Define a cor de fundo a partir de uma variável */
+    border-radius: 10px; /* Define o raio do canto */
+    display: grid; /* Usa display grid para organizar o conteúdo */
+    gap: 10px; /* Define o espaçamento entre os elementos filhos */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Define estilos para a classe portalDiv */
 .portalDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    flex-direction: column; /* Define a direção flex como coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
 }
 
+/* Define estilos para o título h1 dentro de portalDiv */
 .portalDiv h1 {
-    color: var(--azulMenu);
-    margin-bottom: 0;
+    color: var(--azulMenu); /* Define a cor do texto */
+    margin-bottom: 0; /* Remove a margem inferior */
 }
 
+/* Define estilos para o elemento com ID "portal" */
 #portal {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
 }
 
-.bannerPersonagem h3{
-    color: var(--preto);
-    margin-bottom: 5px;
-    
-
+/* Define estilos para o título h3 dentro de bannerPersonagem */
+.bannerPersonagem h3 {
+    color: var(--preto); /* Define a cor do texto */
+    margin-bottom: 5px; /* Define a margem inferior */
 }
+
 
 #name{
-    text-align: center;
+    text-align: center;/* Centraliza o texto horizontalmente */
     
 }
 
 #image{
-    text-align: center;
+    text-align: center;/* Centraliza o texto horizontalmente */
 }
 
 #species{
-    text-align: center;
-    font-size: x-large;
+    text-align: center;/* Centraliza o texto horizontalmente */
+    font-size: x-large;/* Define o tamanho da fonte como x-large */
     
 }
 
 #gender{
-    text-align: center;
-    font-size: x-large;
+    text-align: center;/* Centraliza o texto horizontalmente */
+    font-size: x-large;/* Define o tamanho da fonte como x-large */
 }
 
-#portal{
-    cursor: pointer;
+#portal {
+    cursor: pointer; /* Define o cursor do mouse como um ponteiro */
 }
-.bannerPersonagem{
+
+/* Remove margens e espaçamentos internos da classe bannerPersonagem */
+.bannerPersonagem {
     margin: 0;
     gap: 0;
 }
 
-
-/* Media queries */
-
+/* Media queries para telas com largura máxima de 768px */
 @media screen and (max-width: 768px) {
     .bannerPersonagem {
-      width: 100%;
+        width: 100%; /* Define a largura como 100% */
     }
 }
 
+/* Media queries para telas com largura máxima de 303px */
 @media screen and (max-width: 303px) {
     .bannerPersonagem {
-      width: 100%;
-      background: none;
-      color: var(--branco);
-
+        width: 100%; /* Define a largura como 100% */
+        background: none; /* Remove o plano de fundo */
+        color: var(--branco); /* Define a cor do texto como branco */
     } 
     .bannerPersonagem h3 {
-      color: var(--branco);
+        color: var(--branco); /* Define a cor do texto como branco */
     }
     .portalDiv h1 {
-        display: none;
+        display: none; /* Oculta o título h1 dentro de .portalDiv */
     }
-    #portal{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    #portal {
+        display: flex; /* Define a exibição como flex */
+        flex-direction: column; /* Define a direção flex como coluna */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
     }
     #portal img {
-        display: block;
-        margin: 0 auto;
+        display: block; /* Define a exibição como bloco */
+        margin: 0 auto; /* Centraliza horizontalmente a imagem */
     }
 }
- @media screen and (max-width: 267px) {
-    #portal{
-        display: none;
+
+/* Media queries para telas com largura máxima de 267px */
+@media screen and (max-width: 267px) {
+    #portal {
+        display: none; /* Oculta completamente o elemento com ID "portal" */
     }
 }

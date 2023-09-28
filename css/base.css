@@ -1,23 +1,26 @@
+/* Define a fonte personalizada 'rick' para uso posterior */
 @font-face {
     font-family: 'rick' ;
     src: url(../assets/fonts/shlop\ rg.otf);
 }
 
+/* Estiliza o corpo da página */
 body {
-    margin: 0;
-    font-family: rick;
-    box-sizing: border-box;
-    --azulMenu: #69C8ECff;
+    margin: 0;/* Define margem zero para o corpo da página */
+    font-family: rick; /* Aplica a fonte personalizada 'rick' ao texto no corpo */
+    box-sizing: border-box;/* Garante que o modelo de caixa seja "border-box" */
+    --azulMenu: #69C8ECff;/* Define uma variável de cor '--azulMenu' */
     --verdeAlien: #08C952;
     --verdeLimao: #5CAD4A;
     --verdeMata: #208D45;
     --verdeGrama: #A7CB54;
     --preto: #0D0D0D;
-    --pretoOpacidade: hsla(0, 0%, 5%, 0.5);
+    --pretoOpacidade: hsla(0, 0%, 5%, 0.5);/* Define uma variável de cor '--pretoOpacidade' com hsla */
     --branco: #F0F2EB;
     background-image: url(../assets/images/ceu-estrelado.jpg);
 }
 
+/* Remove a decoração de texto dos links */
 a{
     text-decoration: none;
 }

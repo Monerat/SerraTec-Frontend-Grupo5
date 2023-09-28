@@ -1,188 +1,199 @@
+/* Define estilos para a seção principal de login */
 .main-login {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw; /* Define a largura como 100% da largura da janela (viewport) */
+    height: 100vh; /* Define a altura como 100% da altura da janela (viewport) */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
+/* Define estilos para a seção de login à esquerda */
 .left-login {
-    width: 54vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 54vh; /* Define a largura como 54% da altura da janela (viewport) */
+    height: 100vh; /* Define a altura como 100% da altura da janela (viewport) */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Define a direção flex como coluna */
 }
 
+/* Define estilos para o título h1 dentro de .left-login */
 .left-login > h1 {
-    color: var(--azulMenu);
-    font-size: 5vh;
+    color: var(--azulMenu); /* Define a cor do texto */
+    font-size: 5vh; /* Define o tamanho da fonte como 5% da altura da janela (viewport) */
 }
 
+/* Define estilos para a seção de login à direita */
 .right-login {
-    width: 50vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vh; /* Define a largura como 50% da altura da janela (viewport) */
+    height: 100vh; /* Define a altura como 100% da altura da janela (viewport) */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-.left-login-image{
-    width: 55vh;
-
+/* Define estilos para a imagem dentro de .left-login-image */
+.left-login-image {
+    width: 55vh; /* Define a largura como 55% da altura da janela (viewport) */
 }
 
+/* Define estilos para o cartão de login */
 .card-login {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background-color:var(--azulMenu);
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px var(--preto);
+    width: 60%; /* Define a largura como 60% */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Define a direção flex como coluna */
+    padding: 30px 35px; /* Define o preenchimento */
+    background-color: var(--azulMenu); /* Define a cor de fundo */
+    border-radius: 20px; /* Define o raio do canto */
+    box-shadow: 0px 10px 40px var(--preto); /* Define uma sombra */
 }
 
+/* Define estilos para o título h1 dentro de .card-login */
 .card-login > h1 {
-    color: var(--preto);
-    font-weight: 800;
-    margin: 0;
+    color: var(--preto); /* Define a cor do texto */
+    font-weight: 800; /* Define a espessura da fonte */
+    margin: 0; /* Remove a margem */
 }
 
+/* Define estilos para links dentro de .card-login */
 .card-login a:link {
-    text-decoration: none;
-    color: var(--branco);
-  }
+    text-decoration: none; /* Remove a decoração do texto */
+    color: var(--branco); /* Define a cor do texto */
+}
   
+/* Define estilos para links visitados dentro de .card-login */
 .card-login a:visited {
-    text-decoration: none;
-    color: var(--branco);
+    text-decoration: none; /* Remove a decoração do texto */
+    color: var(--branco); /* Define a cor do texto para links visitados */
 }
-  
+
+/* Define estilos para links quando o mouse passa por cima dentro de .card-login */
 .card-login a:hover {
-    text-decoration:none;
-    color: var(--preto);
+    text-decoration: none; /* Remove a decoração do texto */
+    color: var(--preto); /* Define a cor do texto para links quando o mouse passa por cima */
 }
-  
+
+/* Define estilos para links ativos (clicados) dentro de .card-login */
 .card-login a:active {
-    text-decoration: none;
+    text-decoration: none; /* Remove a decoração do texto */
 }
 
+/* Define estilos para elementos .textfield */
 .textfield {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0;
+    width: 100%; /* Define a largura como 100% */
+    display: flex; /* Usa display flex para organizar o conteúdo */
+    flex-direction: column; /* Define a direção flex como coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    justify-content: center; /* Centraliza verticalmente */
+    margin: 10px 0; /* Define a margem */
 }
 
-.textfield > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background-color:var(--verdeAlien);
-    color: var(--branco);
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px  var(--preto);
-    outline: none;
-    box-sizing: border-box;
-    font-family: rick;
-    box-shadow: 0px 10px 40px -12px var(--verdeLimao);
+/* Define estilos para elementos de entrada dentro de .textfield */
+.textfield > input {
+    width: 100%; /* Define a largura como 100% */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Define o raio do canto */
+    padding: 15px; /* Define o preenchimento */
+    background-color: var(--verdeAlien); /* Define a cor de fundo */
+    color: var(--branco); /* Define a cor do texto */
+    font-size: 12pt; /* Define o tamanho da fonte */
+    box-shadow: 0px 10px 40px  var(--preto); /* Define uma sombra */
+    outline: none; /* Remove a borda de foco */
+    box-sizing: border-box; /* Define o modelo de caixa */
+    font-family: rick; /* Define a fonte */
+    box-shadow: 0
 }
 
+/* Define estilos para rótulos (labels) dentro de .textfield */
 .textfield > label {
-    color: var(--preto);
-    margin-bottom: 10px;
+    color: var(--preto); /* Define a cor do texto */
+    margin-bottom: 10px; /* Define a margem inferior */
 }
 
+/* Define estilos para o marcador de posição (placeholder) dos elementos de entrada dentro de .textfield */
 .textfield > input::placeholder {
-    color: var(--pretoOpacidade);
+    color: var(--pretoOpacidade); /* Define a cor do marcador de posição com opacidade */
 }
 
+/* Define estilos para o botão de login */
 .btn-login {
-    width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: var(--branco);
-    background-color: var(--preto);
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px var(--preto);
-    font-family: rick;
+    width: 100%; /* Define a largura como 100% */
+    padding: 16px 0px; /* Define o preenchimento */
+    margin: 25px; /* Define a margem */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Define o raio do canto */
+    outline: none; /* Remove a borda de foco */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-weight: 800; /* Define a espessura da fonte */
+    letter-spacing: 3px; /* Define o espaçamento entre letras */
+    color: var(--branco); /* Define a cor do texto como branco */
+    background-color: var(--preto); /* Define a cor de fundo como preto */
+    cursor: pointer; /* Define o cursor do mouse como um ponteiro */
+    box-shadow: 0px 10px 40px -12px var(--preto); /* Define uma sombra */
+    font-family: rick; /* Define a fonte */
 }
 
+/* Define estilos para links no rodapé */
 footer a {
-    color: var(--branco);
-    padding-left: 10px;
-    text-align: center;
+    color: var(--branco); /* Define a cor do texto */
+    padding-left: 10px; /* Define o preenchimento à esquerda */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
-
-
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
+/* Define estilos para o rodapé */
+footer {
+    position: fixed; /* Fixa o rodapé na parte inferior da janela */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    width: 100%; /* Define a largura como 100% */
+    align-items: center; /* Centraliza verticalmente */
 }
+
+/* Define estilos para o texto de fixação no rodapé */
 .fixarRodape {
-    text-align: center;
-    color: var(--branco);
+    text-align: center; /* Alinha o texto ao centro */
+    color: var(--branco); /* Define a cor do texto como branco */
 }
 
-.fixarRodape a:link {
-    text-decoration: none;
-    color: var(--verdeMata);
-  }
-  
-.fixarRodape a:visited {
-    text-decoration: none;
-    color: var(--verdeMata);
-}
-  
+/* Define estilos para links no rodapé quando o mouse passa por cima */
 .fixarRodape a:hover {
-    text-decoration:none;
-    color: var(--verdeAlien);
+    text-decoration: none; /* Remove a decoração do texto */
+    color: var(--verdeAlien); /* Define a cor do texto ao passar o mouse */
 }
-  
+
+/* Define estilos para links no rodapé quando clicados */
 .fixarRodape a:active {
-    text-decoration: none;
+    text-decoration: none; /* Remove a decoração do texto */
 }
 
-@media only screen and (max-width: 950px){
-    .card-login{
-        width: 85%;
+/* Regras de mídia para telas com largura máxima de 950px */
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%; /* Define a largura como 85% */
     }
 }
 
-@media only screen and (max-width: 600px){
-    .main-login{
-        flex-direction: column;
+/* Regras de mídia para telas com largura máxima de 600px */
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column; /* Define a direção flex como coluna */
     }
-    .left-login > h1{
-        display: none;
+    .left-login > h1 {
+        display: none; /* Oculta o título h1 dentro de .left-login */
     }
-    .left-login{
-        width: 100%;
-        height: auto;
+    .left-login {
+        width: 100%; /* Define a largura como 100% */
+        height: auto; /* Define a altura como automática */
     }
-    .right-login{
-        width: 100%;
-        height: auto;
+    .right-login {
+        width: 100%; /* Define a largura como 100% */
+        height: auto; /* Define a altura como automática */
     }
-    .left-login-image{
-        width: 50vh;
+    .left-login-image {
+        width: 50vh; /* Define a largura como 50% da altura da janela (viewport) */
     }
-    .card-login{
-        width: 90%;
-    }   
+    .card-login {
+        width: 90%; /* Define a largura como 90% */
+    }
 }
