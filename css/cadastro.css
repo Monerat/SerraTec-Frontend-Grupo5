@@ -48,7 +48,6 @@ body {
     background-image: url(../assets/images/fundo-imput.jpg);
     box-shadow: 5px 5px 45px 4px bisque;
     padding: 3rem;
-
 }
 
 .form-header {
@@ -83,8 +82,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem 0;
-    
+    padding: 1rem 0;  
 }
 
 .form-group {
@@ -139,7 +137,6 @@ body {
 
 .gender-inpout input {
     margin-right: 0.35rem;
-    
 }
 
 .gender-input label {
@@ -193,9 +190,9 @@ body {
     .form {
       width: 100%;
     }
-  }
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
     .container{
         width: 90%;
         height: auto;
@@ -208,6 +205,7 @@ body {
         padding-right: 5rem;
     }
 }
+
 @media screen and (max-width: 425px) {
     .form-image{
         display: none;
@@ -216,4 +214,4 @@ body {
     .form {
       width: 100%;
     }
-  }
+}

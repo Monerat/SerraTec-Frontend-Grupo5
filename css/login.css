@@ -3,7 +3,6 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .left-login {
@@ -36,7 +35,6 @@
 .card-login {
     width: 60%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
@@ -47,34 +45,25 @@
 
 .card-login > h1 {
     color: var(--preto);
-    font-weight: 800;
     margin: 0;
 }
 
 .card-login a:link {
-    text-decoration: none;
     color: var(--preto);
-  }
+}
   
 .card-login a:visited {
-    text-decoration: none;
     color: var(--preto);
 }
   
 .card-login a:hover {
-    text-decoration:none;
     color: var(--verdeEscuro);
-}
-  
-.card-login a:active {
-    text-decoration: none;
 }
 
 .textfield {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     margin: 10px 0;
 }
@@ -86,7 +75,6 @@
     padding: 15px;
     background-color:var(--verdeAlien);
     font-size: 12pt;
-    box-shadow: 0px 10px 40px  var(--preto);
     outline: none;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -130,8 +118,6 @@ footer a {
     padding-left: 10px;
     text-align: center;
 }
-
-
 
 footer{
     position: fixed;
