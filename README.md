@@ -9,17 +9,16 @@
 - Gustavo Monerat Rosa
 
 ### Abstract 
-Este projeto tem como objetivo exercitar a utilização de uma API como fonte de dados para uma aplicação WEB utilizando HTML, Javascript e CSS.
+Este projeto tem como objetivo exercitar a utilização de uma API como fonte de dados para uma aplicação WEB utilizando HTML, CSS, Javascript e Bootstrap.
 
 ### As features necessárias:
 1. Consumir pelo menos uma API para mostrar dinamicamente os dados vindo da API. Caso o objeto de retorno da API tenha muitas propriedades, não é necessário mostrar todos. Mostrar pelo menos de 4 a 5 atributos. Fica a critério do grupo qual API consumir, ou, usar alguma sugerida pelo professor. Mostrar pelo menos 5 objetos retornados pela API.✔️
 
-2. O consumo da API deve ser de forma dinâmica através de um campo de input ou
-botão.✔️
+2. O consumo da API deve ser de forma dinâmica através de um campo de input ou botão.✔️
 
-3. O sistema deve possuir no mínimo duas páginas: Uma página de login (com opção de cadastrar um novo usuário) e uma página para exibir os dados vindo da API.
-   - 1. Usar o LocalStorage do navegador para guardar a lista de usuários cadastrados. ✔️
-   - 2. Verificar se o usuário está logado para poder consumir a API. Bloquear caso o usuário não esteja logado. ✔️
+3. O sistema deve possuir no mínimo duas páginas: Uma página de login (com opção de cadastrar um novo usuário) e uma página para exibir os dados vindo da API. ✔️
+   - 1. Usar o LocalStorage do navegador para guardar a lista de usuários cadastrados.
+   - 2. Verificar se o usuário está logado para poder consumir a API. Bloquear caso o usuário não esteja logado.
 
 4. Usar pelo menos uma classe JavaScript no projeto.✔️
 

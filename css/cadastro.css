@@ -101,7 +101,9 @@ body {
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px var(--azulMenu);
-    font-size: large;
+    font-size: 12pt;
+    color: var(--preto);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .form-group inpur::hover {
@@ -120,7 +122,7 @@ body {
 }
 
 .form-group input::placeholder{
-    color: var(--preto);
+    color: var(--pretoOpacidade);
 }
 
 .gender-group {
@@ -154,10 +156,12 @@ body {
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16pt;
+    color: var(--preto);
 }
 
 .continue-button button:hover {
-    background-color: aquamarine;
+    background-color: var(--azulEscuro);
 }
 
 .continue-button button a {
@@ -165,6 +169,20 @@ body {
     font-size: 2rem;
     font-weight: 500;
     color: var(--branco);
+}
+
+.linkLogin {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.linkLogin a {
+    color: var(--preto);
+    text-decoration: none;
+}
+
+.linkLogin a:hover {
+    color: var(--azulEscuro);
 }
 
 @media screen and (max-width: 768px) {
@@ -177,7 +195,7 @@ body {
     }
   }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1200px) {
     .container{
         width: 90%;
         height: auto;

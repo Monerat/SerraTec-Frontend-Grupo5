@@ -1,4 +1,3 @@
-// const EXPIRATION_TIME = 3600000;
 const padrao = [
     {
         usuario: "josezin",
@@ -13,15 +12,24 @@ let usuarios = localStorage.getItem("usuarios")
 
 if (usuarios) usuarios = JSON.parse(usuarios);
 else usuarios = padrao;
+//inicializa a base
 localStorage.setItem("usuarios",JSON.stringify(usuarios));
+//inicializa o token
 localStorage.setItem("token",token);
 
+//Armazena oque foi inserido nos campos do formulario no local Storage.
 function armazenarBase(event){
     event.preventDefault();
     const inputUser = document.getElementById("cadastroUsuario");
     const inputEmail = document.getElementById("cadastroEmail");
     const inputPassword = document.getElementById("cadastroPassword");
-    if(!checarUsuarioBase(inputUser.value)){
+    const inputConfirmPwd = document.getElementById("cadastroConfirmPwd");
+    console.log(inputPassword)
+    console.log(inputConfirmPwd)
+    console.log((inputPassword == inputConfirmPwd))
+    
+
+    if(!checarUsuarioBase(inputUser.value) && (inputPassword.value == inputConfirmPwd.value)){
         const user =  
         {
         usuario: inputUser.value,
@@ -31,11 +39,14 @@ function armazenarBase(event){
         usuarios.push(user);
         localStorage.setItem("usuarios",JSON.stringify(usuarios));
         window.location.href="login.html"
-    }else{
+    }else if (checarUsuarioBase(inputUser.value)){
         window.alert("Usuário já cadastrado na Base")
+    }else {
+        window.alert("As duas senhas não conferem")
     }
 }
 
+//Checa se o usuario já está inserido na base.
 function checarUsuarioBase(user){
     const usuario = localStorage.getItem("usuarios")
     let decodeUser = JSON.parse(usuario);
@@ -49,6 +60,7 @@ function checarUsuarioBase(user){
     }
 }
 
+//Faz o login se o usuario e senha estiver na base.
 function inputLogin(event){
     event.preventDefault();
     const inputUser = document.getElementById("loginUsuario");
@@ -62,6 +74,7 @@ function inputLogin(event){
     }
 }
 
+//Checa se o par Usuario e Senha estao na base
 function checarLogin(user, password){ 
     const usuario = localStorage.getItem("usuarios");
     let decodeUser = JSON.parse(usuario);
@@ -75,19 +88,4 @@ function checarLogin(user, password){
     else{
         return false;
     }
-}
-
-function obterUsuario() {
-    const usuario = localStorage.getItem("usuarios")
-    let decodeUser = JSON.parse(usuario);
-
-    if(decodeUser) {
-        return decodeUser;
-    }
-}
-
-function testDelay(){
-    setTimeout(() => {
-        console.log(obterUsuario());
-      }, 2000);
 }
