@@ -53,17 +53,17 @@
 
 .card-login a:link {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--preto);
   }
   
 .card-login a:visited {
     text-decoration: none;
-    color: var(--branco);
+    color: var(--preto);
 }
   
 .card-login a:hover {
     text-decoration:none;
-    color: var(--preto);
+    color: var(--verdeEscuro);
 }
   
 .card-login a:active {
@@ -85,18 +85,18 @@
     border-radius: 10px;
     padding: 15px;
     background-color:var(--verdeAlien);
-    color: var(--branco);
     font-size: 12pt;
     box-shadow: 0px 10px 40px  var(--preto);
     outline: none;
     box-sizing: border-box;
-    font-family: rick;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 10px 40px -12px var(--verdeLimao);
 }
 
 .textfield > label {
     color: var(--preto);
     margin-bottom: 10px;
+    font-size: 14pt;
 }
 
 .textfield > input::placeholder {
@@ -118,6 +118,11 @@
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px var(--preto);
     font-family: rick;
+}
+
+.btn-login:hover {
+    color: var(--branco);
+    background-color: var(--verdeEscuro);
 }
 
 footer a {

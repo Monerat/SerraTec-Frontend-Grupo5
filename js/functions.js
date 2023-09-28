@@ -2,7 +2,7 @@ const url = "https://rickandmortyapi.com/api/character/"; //coloca um valor cons
 
 // declara a variavel que armazena o valor total de personagens disponiveis na API
 let totalPersonagens;
-const EXPIRATION_TIME = 10000;
+const EXPIRATION_TIME = 50000000000000000;
 
 consultaAllChars();
 trocarStatusToken();

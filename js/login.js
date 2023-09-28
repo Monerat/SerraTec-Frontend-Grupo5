@@ -21,7 +21,9 @@ function armazenarBase(event){
     const inputUser = document.getElementById("cadastroUsuario");
     const inputEmail = document.getElementById("cadastroEmail");
     const inputPassword = document.getElementById("cadastroPassword");
-    if(!checarUsuarioBase(inputUser.value)){
+    const inputConfirmPwd = document.getElementById("cadastroConfirmPwd");
+    
+    if(!checarUsuarioBase(inputUser.value) && inputPassword == inputConfirmPwd){
         const user =  
         {
         usuario: inputUser.value,
@@ -31,8 +33,10 @@ function armazenarBase(event){
         usuarios.push(user);
         localStorage.setItem("usuarios",JSON.stringify(usuarios));
         window.location.href="login.html"
-    }else{
+    }else if (checarUsuarioBase(inputUser.value)){
         window.alert("Usuário já cadastrado na Base")
+    }else {
+        window.alert("As duas senhas não conferem")
     }
 }
 
