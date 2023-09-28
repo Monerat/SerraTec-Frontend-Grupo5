@@ -2,6 +2,7 @@ const url = "https://rickandmortyapi.com/api/character/"; //coloca um valor cons
 
 // declara a variavel que armazena o valor total de personagens disponiveis na API
 let totalPersonagens;
+
 const EXPIRATION_TIME = 60000; //60 segundos de duração no uso da API.
 
 consultaAllChars(); //chama a funcao para consultar todos os personagens disponiveis, apenas para pegar o total de personagens na API.
