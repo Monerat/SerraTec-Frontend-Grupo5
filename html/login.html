@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><!-- Define o conjunto de caracteres e a viewport para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/base.css"> <!-- Links para folhas de estilo CSS -->
     <link rel="stylesheet" href="../css/login.css">
-    <link rel="shortcut icon" href="../assets/images/icon-rick.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/icon-rick.png" type="image/x-icon">   <!-- Ícone da página exibido na aba do navegador -->
     <title>Login API - Grupo 5</title>
     
 </head>
 <body>
-  <div class="main-login">
-        <div class="left-login">
+  <div class="main-login"> <!-- Container principal da página -->
+        <div class="left-login">  <!-- Parte esquerda da página de login -->
             <h1 class="titulo">Qual personagem do Rick and Morty voce e? 🌌</h1>
-            <img src="../assets/images/rick-removebg-preview.png" class="left-login-image" alt="tecnologia">
+            <img src="../assets/images/rick-removebg-preview.png" class="left-login-image" alt="tecnologia"><!-- Imagem exibida na parte esquerda -->
         </div>
-        <div class="right-login">
-            <form class="card-login"onsubmit="inputLogin(event)">
+        <div class="right-login"><!-- Parte direita da página de login -->
+            <form class="card-login"onsubmit="inputLogin(event)">  <!-- Formulário de login -->
+                <!-- ele vai logar na função input login na função do java e enviar -->
                 <h1>LOGIN 🔫</h1>
-                <div class="textfield">
+                <div class="textfield"> <!-- Campo de entrada para o nome de usuário -->
                     <label for="loginUsuario">Usuário</label>
                     <input id="loginUsuario" type="text" name="usuario" placeholder="Usuário" autocomplete="off">
                 </div>
                 <div class="textfield">
-                    <label for="loginSenha">Senha</label>
+                    <label for="loginSenha">Senha</label> <!-- Campo de entrada para a senha -->
                     <input id="loginSenha" type="password" name="senha" placeholder="Senha">
                 </div>
-                <button class="btn-login" type="submit">Login</button>
-                <a href="./cadastro.html"><h3>Novo usuário? Cadastre-se!</h3>
+                <button class="btn-login" type="submit">Login</button>   <!-- Botão de login -->
+                <a href="./cadastro.html"><h3>Novo usuário? Cadastre-se!</h3> <!-- Link para a página de cadastro -->
             </form>
         </div>
-        <footer class="fixarRodape">
+        <footer class="fixarRodape"> <!-- Rodapé da página --><!-- Links para redes sociais -->
             <a href="https://github.com/Monerat/SerraTec-Frontend-Grupo5" target="_blank">Front End Grupo 5 &COPY2023</a>
             &nbsp; | &nbsp;
             <a href="https://www.instagram.com/serratecoficial/" target="_blank">Instagram</a>
@@ -38,6 +39,6 @@
             <a href="https://www.youtube.com/@SerratecOficial" target="_blank">Youtube</a> 
         </footer>
   </div> 
-  <script src="../js/login.js"></script> 
+  <script src="../js/login.js"></script>  <!-- Importa o arquivo JavaScript para a página de login -->
 </body>
 </html>

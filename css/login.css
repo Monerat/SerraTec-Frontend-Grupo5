@@ -1,193 +1,193 @@
 .main-login {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    display: flex; /* Usa um modelo flexível para posicionamento dos elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .left-login {
-    width: 54vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 54vh; /* Largura de 54vh */
+    height: 100vh; /* Altura total da viewport */
+    display: flex; /* Usa um modelo flexível para posicionamento dos elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
 }
 
 .left-login > h1 {
-    color: var(--azulMenu);
-    font-size: 5vh;
+    color: var(--azulMenu); /* Define a cor do texto como a variável '--azulMenu' */
+    font-size: 5vh; /* Define o tamanho da fonte como 5vh */
 }
 
 .right-login {
-    width: 50vh;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vh; /* Largura de 50vh */
+    height: 100vh; /* Altura total da viewport */
+    display: flex; /* Usa um modelo flexível para posicionamento dos elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .left-login-image{
-    width: 55vh;
+    width: 55vh;/* Largura de 55vh */
 
 }
 
 .card-login {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background-color:var(--azulMenu);
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px var(--preto);
+    width: 60%; /* Largura de 60% */
+    display: flex; /* Usa um modelo flexível para posicionamento dos elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    padding: 30px 35px; /* Preenchimento superior de 30px e preenchimento lateral de 35px */
+    background-color: var(--azulMenu); /* Define a cor de fundo como a variável '--azulMenu' */
+    border-radius: 20px; /* Define um raio de borda de 20px */
+    box-shadow: 0px 10px 40px var(--preto); /* Adiciona uma sombra */
 }
 
 .card-login > h1 {
-    color: var(--preto);
-    font-weight: 800;
-    margin: 0;
+    color: var(--preto); /* Define a cor do texto como a variável '--preto' */
+    font-weight: 800; /* Define o peso da fonte como 800 */
+    margin: 0; /* Remove margens */
 }
 
 .card-login a:link {
-    text-decoration: none;
-    color: var(--preto);
-  }
+    text-decoration: none; /* Remove a decoração do link */
+    color: var(--preto); /* Define a cor do texto como a variável '--preto' */
+}
   
 .card-login a:visited {
-    text-decoration: none;
-    color: var(--preto);
+    text-decoration: none; /* Remove a decoração do link */
+    color: var(--preto); /* Define a cor do texto como a variável '--preto' */
 }
   
 .card-login a:hover {
-    text-decoration:none;
-    color: var(--verdeEscuro);
+    text-decoration:none; /* Remove a decoração de texto (sublinhado) */
+    color: var(--verdeEscuro); /* Define a cor do texto como a variável CSS '--verdeEscuro' */
 }
   
 .card-login a:active {
-    text-decoration: none;
+    text-decoration: none;/* Remove a decoração de texto (sublinhado) */
 }
 
 .textfield {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 10px 0;
+    width: 100%; /* Define a largura como 100% */
+    display: flex; /* Configura a exibição como flexível */
+    flex-direction: column; /* Define a direção da coluna para os filhos */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    justify-content: center; /* Centraliza verticalmente */
+    margin: 10px 0; /* Define margem superior e inferior de 10px */
 }
 
 .textfield > input{
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background-color:var(--verdeAlien);
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px  var(--preto);
-    outline: none;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 0px 10px 40px -12px var(--verdeLimao);
+    width: 100%; /* Define a largura como 100% */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Define um raio de borda de 10px */
+    padding: 15px; /* Define o preenchimento interno de 15px */
+    background-color:var(--verdeAlien); /* Define a cor de fundo usando a variável '--verdeAlien' */
+    font-size: 12pt; /* Define o tamanho da fonte */
+    box-shadow: 0px 10px 40px  var(--preto); /* Adiciona uma sombra */
+    outline: none; /* Remove o contorno ao focar */
+    box-sizing: border-box; /* Inclui preenchimento e borda no tamanho total */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte da família */
+    box-shadow: 0px 10px 40px -12px var(--verdeLimao); /* Adiciona uma sombra com valores negativos */
 }
 
 .textfield > label {
-    color: var(--preto);
-    margin-bottom: 10px;
-    font-size: 14pt;
+    color: var(--preto); /* Define a cor do texto como a variável '--preto' */
+    margin-bottom: 10px; /* Define uma margem inferior de 10px */
+    font-size: 14pt; /* Define o tamanho da fonte */
 }
 
 .textfield > input::placeholder {
-    color: var(--pretoOpacidade);
+    color: var(--pretoOpacidade); /* Define a cor do texto de espaço reservado usando a variável '--pretoOpacidade' */
 }
 
 .btn-login {
-    width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: var(--branco);
-    background-color: var(--preto);
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px var(--preto);
-    font-family: rick;
+    width: 100%; /* Define a largura como 100% */
+    padding: 16px 0px; /* Define o preenchimento interno vertical de 16px e nenhum preenchimento horizontal */
+    margin: 25px; /* Define margem de 25px em todas as direções */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Define um raio de borda de 8px */
+    outline: none; /* Remove o contorno ao focar */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-weight: 800; /* Define a espessura da fonte */
+    letter-spacing: 3px; /* Define o espaçamento entre letras */
+    color: var(--branco); /* Define a cor do texto usando a variável '--branco' */
+    background-color: var(--preto); /* Define a cor de fundo usando a variável '--preto' */
+    cursor: pointer; /* Define um cursor como ponteiro */
+    box-shadow: 0px 10px 40px -12px var(--preto); /* Adiciona uma sombra com valores negativos */
+    font-family: rick; /* Define a fonte da família */
 }
 
-.btn-login:hover {
-    color: var(--branco);
-    background-color: var(--verdeEscuro);
+.btn-login:hover {/* Define estilos para 'btn-login' quando o cursor está sobre ele */
+    color: var(--branco); /* Define a cor do texto como '--branco' */
+    background-color: var(--verdeEscuro); /* Define a cor de fundo como '--verdeEscuro' */
 }
 
 footer a {
-    color: var(--branco);
-    padding-left: 10px;
-    text-align: center;
+    color: var(--branco); /* Define a cor do texto como '--branco' */
+    padding-left: 10px; /* Define um preenchimento à esquerda de 10px */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 
 
 footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    align-items: center;
+    position: fixed; /* Define a posição do elemento como fixa */
+    bottom: 0; /* Alinha o elemento na parte inferior da viewport */
+    width: 100%; /* Define a largura do elemento como 100% da largura da viewport */
+    align-items: center; /* Centraliza os itens dentro do elemento */
 }
 .fixarRodape {
-    text-align: center;
-    color: var(--branco);
+    text-align: center; /* Centraliza o texto horizontalmente dentro dos elementos com essa classe */
+    color: var(--branco); /* Define a cor do texto como a variável '--branco' */
 }
 
 .fixarRodape a:link {
-    text-decoration: none;
-    color: var(--verdeMata);
+    text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+    color: var(--verdeMata); /* Define a cor do texto como a variável '--verdeMata' */
   }
   
 .fixarRodape a:visited {
-    text-decoration: none;
-    color: var(--verdeMata);
+    text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+    color: var(--verdeMata); /* Define a cor do texto como a variável '--verdeMata' */
 }
   
 .fixarRodape a:hover {
-    text-decoration:none;
-    color: var(--verdeAlien);
+    text-decoration: none; /* Remove a decoração de texto (sublinhado) */
+    color: var(--verdeAlien); /* Define a cor do texto como a variável '--verdeAlien' */
 }
   
 .fixarRodape a:active {
-    text-decoration: none;
+    text-decoration: none;/* Remove a decoração de texto (sublinhado) */
 }
 
 @media only screen and (max-width: 950px){
     .card-login{
-        width: 85%;
+        width: 85%;/* Define a largura de elementos com a classe 'card-login' como 85% */
     }
 }
 
 @media only screen and (max-width: 600px){
     .main-login{
-        flex-direction: column;
+        flex-direction: column;/* Altera a direção da coluna para elementos com a classe 'main-login' */
     }
     .left-login > h1{
-        display: none;
+        display: none;/* Esconde o elemento 'h1' dentro de elementos com a classe 'left-login' */
     }
     .left-login{
-        width: 100%;
-        height: auto;
+        width: 100%; /* Define a largura como 100% */
+        height: auto; /* Define a altura automaticamente */
     }
     .right-login{
-        width: 100%;
-        height: auto;
+        width: 100%; /* Define a largura como 100% */
+        height: auto; /* Define a altura automaticamente */
     }
     .left-login-image{
-        width: 50vh;
+        width: 50vh; /* Define a largura em relação à altura da viewport (50%) */
     }
     .card-login{
-        width: 90%;
+        width: 90%; /* Define a largura como 90% */
     }   
 }

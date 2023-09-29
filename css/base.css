@@ -1,12 +1,15 @@
+/* Define a fonte personalizada chamada 'rick' */
 @font-face {
     font-family: 'rick' ;
     src: url(../assets/fonts/shlop\ rg.otf);
 }
 
+/* Define estilos globais para o corpo do documento */
 body {
-    margin: 0;
-    font-family: rick;
-    box-sizing: border-box;
+    margin: 0; /* Remove margem externa */
+    font-family: rick; /* Define a fonte para 'rick' */
+    box-sizing: border-box; /* Inclui a borda no cálculo do tamanho do elemento */
+    /* Definição de variáveis de cores personalizadas */
     --azulMenu: #69C8ECff;
     --azulEscuro: rgb(76, 0, 218);
     --verdeAlien: #08C952;
@@ -19,9 +22,11 @@ body {
     --pretoOpacidade: hsla(0, 0%, 5%, 0.5);
     --branco: #F0F2EB;
 
+    /* Define a imagem de fundo do corpo */
     background-image: url(../assets/images/ceu-estrelado.jpg);
 }
 
+/* Remove a decoração de texto padrão para links */
 a{
     text-decoration: none;
 }

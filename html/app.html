@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/icon-rick.png" type="image/x-icon">
-    <title>Qual é o seu personagem?</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/app.css">
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define as configurações de viewport para dispositivos móveis -->
+    <link rel="shortcut icon" href="../assets/images/icon-rick.png" type="image/x-icon"> <!-- Define o ícone da página -->
+    <title>Qual é o seu personagem?</title> <!-- Define o título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../css/base.css"> <!-- Importa uma folha de estilo CSS chamada 'base.css' -->
+    <link rel="stylesheet" href="../css/app.css"> <!-- Importa uma folha de estilo CSS chamada 'app.css' -->
 </head>
 <body>
     <div class="grid-container">
-        <div class="bannerPersonagem">
-            <div id="name"></div>
-            <div id="image"></div>
-            <div id="species"></div>
-            <div id="gender"></div>
+        <div class="bannerPersonagem"> <!-- Define um contêiner com a classe 'bannerPersonagem' -->
+            <div id="name"></div> <!-- Define um elemento com um ID 'name' -->
+            <div id="image"></div> <!-- Define um elemento com um ID 'image' -->
+            <div id="species"></div> <!-- Define um elemento com um ID 'species' -->
+            <div id="gender"></div> <!-- Define um elemento com um ID 'gender' -->
         </div>
-        <div class="portalDiv">
-            <h1>Entre no Portal e</h1><h1>Descubra seu Personagem!</h1>
-            <img src="../assets/images/portal-rick-and-morty.gif" id="portal" alt="portal-rick-and-morty"></img>
+        <div class="portalDiv"> <!-- Define um contêiner com a classe 'portalDiv' -->
+            <h1>Entre no Portal e</h1> <!-- Define um título de nível 1 -->
+            <h1>Descubra seu Personagem!</h1> <!-- Define outro título de nível 1 -->
+            <img src="../assets/images/portal-rick-and-morty.gif" id="portal" alt="portal-rick-and-morty"></img> <!-- Insere uma imagem com um ID 'portal' e um texto alternativo -->
         </div>
     </div>
-    <audio hidden controls id="portalSFX">
-        <source src="../assets/audio/portal-gun-sound-effect.mp3" type="audio/mpeg">
+    <audio hidden controls id="portalSFX"> <!-- Define um elemento de áudio com um ID 'portalSFX' -->
+        <source src="../assets/audio/portal-gun-sound-effect.mp3" type="audio/mpeg"> <!-- Define a origem e o tipo do arquivo de áudio -->
     </audio>
-    <script type="module" src="../js/functions.js"></script>
+    <script type="module" src="../js/functions.js"></script> <!-- Importa um script JavaScript chamado 'functions.js' -->
 </body>
 </html>
